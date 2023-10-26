@@ -33,6 +33,7 @@ pipeline {
                 }
             }
             steps {
+                sh 'docker pull cdrx/pyinstaller-linux:python2'
                 sh 'pyinstaller --onefile sources/add2vals.py'
             }
             post {
